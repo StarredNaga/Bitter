@@ -1,0 +1,91 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="RoundedBlueButton" TargetType="Button">
+        <Setter Property="Background" Value="#FF6495ED" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource JetBrainsMono}" />
+        <Setter Property="Padding" Value="12,6" />
+        <Setter Property="Margin" Value="8" />
+        <Setter Property="Cursor" Value="Hand" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border
+                        x:Name="mainBorder"
+                        Margin="{TemplateBinding Margin}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="8"
+                        SnapsToDevicePixels="True">
+
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            TextElement.FontFamily="{TemplateBinding FontFamily}"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <!--  Нажатие  -->
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="mainBorder" Property="Background" Value="#4d84ea" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BlueButton" TargetType="Button">
+        <Setter Property="Background" Value="#FF6495ED" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource JetBrainsMono}" />
+        <Setter Property="Cursor" Value="Hand" />
+
+        <Setter Property="Template">
+
+            <Setter.Value>
+
+                <ControlTemplate TargetType="Button">
+
+                    <Border
+                        x:Name="mainBorder"
+                        Margin="{TemplateBinding Margin}"
+                        Padding="{TemplateBinding Padding}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        SnapsToDevicePixels="True">
+
+                        <ContentPresenter
+                            x:Name="contentPresenter"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="mainBorder" Property="Background" Value="#4d84ea" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+
+            </Setter.Value>
+
+        </Setter>
+
+    </Style>
+
+</ResourceDictionary>

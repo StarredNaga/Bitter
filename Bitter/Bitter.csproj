@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Fonts\JetBrainsMono-Bold.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-BoldItalic.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-BoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-ExtraBold.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-ExtraBoldItalic.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-ExtraBoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-Italic.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-Italic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-Medium.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-MediumItalic.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-MediumItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-Regular.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-SemiBold.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Remove="Fonts\JetBrainsMono-SemiBoldItalic.ttf" />
+    <Resource Include="Fonts\JetBrainsMono-SemiBoldItalic.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
