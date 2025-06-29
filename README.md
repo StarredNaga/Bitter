@@ -3,6 +3,10 @@
 ![WPF Application](https://img.shields.io/badge/.NET%20WPF-Application-blueviolet)
 ![Platform](https://img.shields.io/badge/Platform-Windows-informational)
 
+![Encryption page](https://github.com/StarredNaga/Bitter/blob/master/Bitter/Images/EncryptPage.bmp)
+![Decryption page](https://github.com/StarredNaga/Bitter/blob/master/Bitter/Images/DecryptPage.bmp)
+![Settings page](https://github.com/StarredNaga/Bitter/blob/master/Bitter/Images/SettingsPage.bmp)
+
 **Bitter** is a reliable desktop application developed in C# and WPF designed for encrypting and decrypting files using modern cryptographic algorithms. Ensure the security of your data with an easy-to-use interface for Windows.
 
 ---
@@ -26,7 +30,7 @@
 ### How to use
 1. Launch the application.
 2. Select a file for encryption or decryption.
-3. Enter your password.
+3. Enter your password in settings or use default.
 4. Click "Encrypt" or "Decrypt".
 5. Specify the save location.
 
