@@ -43,7 +43,7 @@ public partial class MainWindow : Window
     // Set encryption key in ui and settings
     private void SetupInitialSettings()
     {
-        var key = _configurations.ConfigureServices().GetRequiredService<byte[]>();
+        var key = _configurations.ConfigureServices().GetRequiredService<EncryptionOptions>().Key;
 
         _settings = new Settings(key);
         _encryptSettings = new EncryptSettings(key, string.Empty, string.Empty);

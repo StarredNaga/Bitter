@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Security.Cryptography;
 using Bitter.Interfaces;
+using Bitter.Models;
 
 namespace Bitter.Services.Ciphers;
 
@@ -14,9 +15,9 @@ public class AesCipher : ICipher
     private byte[] _iv;
     private byte[] _aesKey;
 
-    public AesCipher(byte[] key)
+    public AesCipher(EncryptionOptions options)
     {
-        SetKey(key);
+        SetKey(options.Key);
     }
 
     public void SetKey(byte[] key)
@@ -31,7 +32,15 @@ public class AesCipher : ICipher
 
     private void DeriveKeyAndIv()
     {
-        _aesKey = SHA256.HashData(_key);
+        _iv = MD5.HashData(_key);
+
+        var deriveBytes = new PasswordDeriveBytes(_key, _iv);
+
+        _aesKey = deriveBytes.CryptDeriveKey("TripleDES", "SHA256", 192, _iv.Take(8).ToArray());
+    }
+
+    private void UpdateIv()
+    {
         _iv = MD5.HashData(_key);
     }
 
@@ -39,6 +48,8 @@ public class AesCipher : ICipher
     {
         if (input == null || input.Length == 0)
             throw new ArgumentNullException("input", "Content can't be null or empty.");
+
+        UpdateIv();
 
         using var aes = Aes.Create();
 

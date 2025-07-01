@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Bitter.Interfaces;
+using Org.BouncyCastle.Security;
 
 namespace Bitter.Services.KeyGenerators;
 
@@ -12,7 +13,7 @@ public class BaseKeyGenerator : IKeyGenerator
 
     public byte[] GenerateKey(int length)
     {
-        var random = new Random();
+        var random = new SecureRandom();
         var builder = new StringBuilder();
 
         for (var i = 0; i < length; i++)

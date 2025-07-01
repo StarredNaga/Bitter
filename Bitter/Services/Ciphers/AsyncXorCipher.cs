@@ -1,4 +1,5 @@
 ﻿using Bitter.Interfaces;
+using Bitter.Models;
 
 namespace Bitter.Services.Ciphers;
 
@@ -9,12 +10,9 @@ public class AsyncXorCipher : IAsyncCipher
 {
     private byte[] _key;
 
-    public AsyncXorCipher(byte[] key)
+    public AsyncXorCipher(EncryptionOptions options)
     {
-        if (key.Length == 0 || key == null)
-            throw new ArgumentNullException("key");
-
-        _key = key;
+        SetKey(options.Key);
     }
 
     public void SetKey(byte[] key)

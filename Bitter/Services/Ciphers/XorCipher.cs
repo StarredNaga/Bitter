@@ -1,4 +1,5 @@
 ﻿using Bitter.Interfaces;
+using Bitter.Models;
 
 namespace Bitter.Services.Ciphers;
 
@@ -9,9 +10,9 @@ public class XorCipher : ICipher
 {
     private byte[] _key;
 
-    public XorCipher(byte[] key)
+    public XorCipher(EncryptionOptions options)
     {
-        SetKey(key);
+        SetKey(options.Key);
     }
 
     public void SetKey(byte[] key)

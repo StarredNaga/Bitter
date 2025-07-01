@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 using Bitter.Interfaces;
+using Bitter.Models;
 using Bitter.Services.Ciphers;
 using Bitter.Services.FileRecognizers;
 using Bitter.Services.FileService;
@@ -44,7 +45,7 @@ public class Configurations
             throw new Exception("Encryption Key is missing");
 
         _services
-            .AddSingleton(Encoding.UTF8.GetBytes(key)) // Encryption/Decryption key
+            .AddSingleton(new EncryptionOptions(Encoding.UTF8.GetBytes(key))) // Options with Encryption/Decryption key
             .AddSingleton<IKeyGenerator, BaseKeyGenerator>() // Key generator
             .AddSingleton<IAsyncCipher, AsyncXorCipher>() // Async cipher
             .AddSingleton<ICipher, AesCipher>() // Sync cipher
