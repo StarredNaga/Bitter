@@ -7,7 +7,7 @@
 ![Decryption page](https://github.com/StarredNaga/Bitter/blob/master/Bitter/Images/DecryptPage.bmp)
 ![Settings page](https://github.com/StarredNaga/Bitter/blob/master/Bitter/Images/SettingsPage.bmp)
 
-**Bitter** is a reliable desktop application developed in C# and WPF designed for encrypting and decrypting files using modern cryptographic algorithms. Ensure the security of your data with an easy-to-use interface for Windows.
+**Bitter** is a reliable desktop application developed in C# and WPF designed for encrypting and decrypting files using cryptographic algorithms. Ensure the security of your data with an easy-to-use interface for Windows.
 
 ---
 
